@@ -1,3 +1,3 @@
-# OliNero.com
+# OliNero
 
-The website of OliNero HB.
+https://olinero.com
