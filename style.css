@@ -3,6 +3,11 @@
   src: url(fonts/GOTHICB.TTF);
 }
 
+:root {
+  --color-primary: #000064;
+  --color-secondary: #ffffff;
+}
+
 html,
 body {
   height: 100%;
@@ -16,6 +21,7 @@ body {
 }
 
 #olinero {
+  color: var(--color-primary);
   font-size: 74pt;
   font-weight: bold;
 }
