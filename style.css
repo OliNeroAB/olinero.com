@@ -6,6 +6,7 @@
 :root {
   --color-primary: #000064;
   --color-secondary: #ffffff;
+  --page-width: 35%;
 }
 
 h1,
@@ -35,15 +36,14 @@ p {
 
 main {
   flex-grow: 1;
-  width: 35%;
+  width: var(--page-width);
 
   display: flex;
   flex-direction: column;
 }
 
 #content {
-  margin-top: 5rem;
-  padding: 1.5rem;
+  margin-top: 4rem;
 }
 
 #olinero-logo-container {
@@ -69,13 +69,17 @@ main {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+#navbar .navbar-group {
+  width: var(--page-width);
+  display: flex;
+  justify-content: center;
 }
 
 #navbar a {
-  display: block;
-  float: left;
-  padding: 1rem 1.5rem;
+  flex: 1;
+  padding: 1rem 0;
   color: var(--color-secondary);
   text-align: center;
   text-decoration: none;
@@ -96,8 +100,6 @@ main {
 }
 
 .contact-item h3 {
-  color: var(--color-primary);
-  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
@@ -110,20 +112,15 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  #navbar {
-    justify-content: space-around;
-  }
-
-  #navbar a {
-    flex: 1;
-    padding: 1.5rem 0;
-  }
-
-  main {
-    width: 100%;
+  :root {
+    --page-width: 100%;
   }
 
   #olinero-logo {
     font-size: 13vw;
+  }
+
+  #content {
+    padding: 0 1.5rem;
   }
 }
